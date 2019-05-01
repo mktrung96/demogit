@@ -1,0 +1,27 @@
+﻿sudo service apache2 restart                  restart apache
+
+
+lỗi premission
+To ordinary user write to /var/www need to takeover it. Supposed the use is pi.
+sudo chown -R pi:www-data /var/www
+Also, need to set user and group permission:
+sudo chmod u+rxw,g+rx-w,o-rwx /var/www
+
+
+Lỗi: The requested URL /phpmyadmin was not found on this server.    config file phpmyadmin
+sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+sudo service apache2 restart
+
+
+
+Lỗi khi đăng nhập dc phpmyadmin: #1698 - Access denied for user 'root'@'localhost'
+$ sudo mysql -u root # I had to use "sudo" since is new installation
+mysql> USE mysql;
+mysql> UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+mysql> FLUSH PRIVILEGES;
+mysql> exit;
+$ service mysql restart
+
+Lỗi: Error connect connection databaseAccess denied for user 'root'@'localhost' (using password: NO)
+Sửa file config.php trong project

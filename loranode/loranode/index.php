@@ -206,44 +206,6 @@ style="background-color: white; box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.21); m
 
 <!-- divEnd -->
 <div id="divEnd" class="col-md-6" style="padding-right: 0px ;">
-	<!-- <div id="divInfomation" class="row"
-	style="margin: 0px; box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.21); padding: 0px;">
-
-	<table class="table table-bordered" style="margin-bottom: 10px;">
-		<tr>
-			<th class="text-center">Khoảng giá trị AQI</th>
-			<th class="text-center">Chất lượng không khí</th>
-			<th class="text-center">Ảnh hưởng sức khỏe</th>
-		</tr>
-		<tr style="background: #02a747">
-			<td>0 - 50</td>
-			<td>Tốt</td>
-			<td>Không ảnh hưởng đến sức khỏe.</td>
-		</tr>
-		<tr style="background: #f5f503">
-			<td>51 - 100</td>
-			<td>Trung bình</td>
-			<td>Nhóm nhạy cảm nên hạn chế thời gian ở bên ngoài.</td>
-		</tr>
-		<tr style="background: #ffb802">
-			<td>101 - 200</td>
-			<td>Kém</td>
-			<td>Nhóm nhạy cảm cần hạn chế thời gian ở bên ngoài.</td>
-		</tr>
-		<tr style="background: #ff0001">
-			<td>201 - 300</td>
-			<td>Xấu</td>
-			<td>Nhóm nhạy cảm tránh ra ngoài. Những người khác hạn chế ở
-			bên ngoài.</td>
-		</tr>
-		<tr style="background: #b40001">
-			<td>Trên 300</td>
-			<td>Nguy hại</td>
-			<td>Mọi người nên ở trong nhà.</td>
-		</tr>
-	</table>
-</div> -->
-<!-- -->
 
 
 <div id="divInfo" class="row text-center"
@@ -598,22 +560,7 @@ vấn dữ liệu đo</h3>
 		<?php foreach ($commonChart['1'] as $key => $statDate) { ?>
 			dataChart1.push("<?php echo $statDate ?>");
 			colorAQI.push('#bdbdbd');
-		// 	<?php if ( $statDate <=50) { ?>
-		// 		colorAQI.push('#00e400');
-		// 	<?php  } ?>
-		// 	<?php if ( $statDate > 50 && data <= 100 ) { ?>
-		// 	colorAQI.push('#ffff02');
-		// 	<?php } ?>
-		// 	<?php if ( $statDate > 100 && data <= 200 ) { ?>
-		// 	colorAQI.push('#ff7e00');
-		// 	<?php  }?>
-		// 	<?php if ( $statDate > 200 && data <= 300 ) { ?>
-		// 	colorAQI.push('#ff0000');
-		// 	<?php } ?>
-		// 	<?php if($statDate > 300) { ?>
-		// 	colorAQI.push('#7f0023');
-		// 	<?php } ?>
-		// <?php } ?>
+	
 
 		// khai báo chart 1
 		new Chart(document.getElementById("canvas"), {
